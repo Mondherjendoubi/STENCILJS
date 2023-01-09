@@ -1,0 +1,134 @@
+
+.btn {
+  &:link,
+  &btn:visited {
+    font-family: sans-serif;
+    position: absolute;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 1px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.5s;
+    animation-name: moveInBottom;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+  }
+
+  &--color {
+    &--red {
+      background-color: var(--primary-30);
+      color: var(--primary-10);
+
+      &::after {
+        background-color: var(--primary-30);
+        color: var(--primary-10);
+      }
+
+      &--white {
+        color: var(--white);
+      }
+
+      &--black {
+        color: var(--primary-10);
+      }
+
+    }
+
+    &--blue {
+      background-color: var(--primary-70);
+      color: var(--primary-10);
+
+      &::after {
+        background-color: var(--primary-70);
+        color: var(--primary-10);
+      }
+
+      &--white {
+        color: var(--white);
+      }
+
+      &--black {
+        color: var(--primary-10);
+      }
+    }
+
+    &--orange {
+      background-color: var(--warning-70);
+      color: var(--primary-10);
+
+      &::after {
+          background-color: var(--warning-70);
+          color: var(--primary-10);
+      }
+
+      &--white {
+        color: var(--white);
+      }
+
+      &--black {
+        color: var(--primary-10);
+      }
+    }
+
+
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(var(--primary-70), 0.51);
+
+    &::after {
+      transform: scalex(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(var(--primary-70), 0.51);
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: 1.6rem;
+    color: var(--primary-70);
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid var(--primary-70);
+    padding: 3px;
+    transition: all 0.3s;
+
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    background: var(--primary-70);
+    color: var(--primary-70);
+    box-shadow: 0 1rem 2rem rgba(var(--primary-70), .25);
+  }
+
+  &:active {
+    transform: translateY(-2px);
+  }
+}
+
+
+
+

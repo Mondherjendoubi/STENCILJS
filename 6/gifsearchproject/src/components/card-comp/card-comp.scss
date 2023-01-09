@@ -1,0 +1,153 @@
+:root {
+  --orange: 253, 166, 60;
+  --orange-light: rgba(var(--orange), 0.15);
+}
+
+.card {
+  perspective: 1500px;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 30rem;
+
+  &__side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 2rem;
+    height: 30rem;
+    transition: all .8s ease;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 40px rgba(var(--primary-30), .15);
+
+    &--front {
+      &--red {
+        background-image: linear-gradient(to right, var(--primary-10), var(--primary-30));;
+      }
+      &--blue {
+        background-image: linear-gradient(to right, var(--primary-10), var(--primary-70));
+      }
+      &--orange {
+        background-image: linear-gradient(to right, var(--primary-10), var(--warning-70));
+      }
+    }
+
+
+    &--back {
+      transform: rotateY(180deg);
+      &--red {
+        background-image: linear-gradient(to right, var(--primary-10), var(--primary-30));;
+      }
+      &--blue {
+        background-image: linear-gradient(to right, var(--primary-10), var(--primary-70));
+      }
+      &--orange {
+        background-image: linear-gradient(to right, var(--primary-10), var(--warning-70));
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+
+  &__picture {
+    background-size: cover;
+    img {
+      background-size: cover;
+      height: 20rem;
+      background-blend-mode: screen;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--primary-05);
+    position: absolute;
+    text-align: right;
+    top: 12rem;
+    right: 3rem;
+    width: 75%;
+  }
+
+  &__heading-span {
+    padding: 0.3rem 1.2rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
+    &--red {
+      background-image: linear-gradient(to right, var(--primary-10), var(--primary-30));
+    }
+    &--blue {
+      background-image: linear-gradient(to right, var(--primary-10), var(--primary-70));
+    }
+    &--orange {
+      background-image: linear-gradient(to right, var(--primary-10), var(--warning-70));
+    }
+  }
+
+  &__details {
+    position: relative;
+    align-items: center;
+    ::slotted(p){
+      position: absolute;
+      left: 2rem;
+      top: 3rem;
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+      width: 80%;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.78rem;
+    }
+  }
+
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    align-items: center;
+
+    btn-exp {
+      position: absolute;
+      left: 2.5rem;
+      bottom: 2rem;
+    }
+  }
+
+  &__price-box {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--primary-05);
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+
+  }
+
+  &__price-value {
+    margin: 0;
+    font-size: 6rem;
+    font-weight: 100;
+  }
+}

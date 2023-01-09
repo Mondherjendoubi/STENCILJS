@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"/>
+  <link rel="stylesheet" href="/build/gifsearchproject.css">
+  <title>Stencil Component Starter</title>
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <style>
+    html {
+      --color-primary: #5105d3;
+      --color-secondary: #0ac903;
+      background-color: rgba(128, 128, 128, 0.2);
+      padding: 10px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: block;
+    }
+
+    .section-1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 0, 144, 0.63), rgba(128, 117, 0, 0.34)), url("https://www.itl.cat/pngfile/big/242-2421741_desktop-wallpaper-8k.jpg");
+      background-size: cover;
+      position: relative;
+      height: 50rem;
+      width: 100%;
+    }
+
+    .section-2 {
+      position: relative;
+      margin-top: -2rem;
+      padding: 20rem 0;
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 255, 0.63), rgba(0, 128, 0, 0.34)), url("https://marmotamaps.com/de/fx/wallpaper/download/faszinationen/Marmotamaps_Wallpaper_Berchtesgaden_Desktop_1920x1080.jpg");
+      background-size: cover;
+      transform: skewY(-2deg);
+    }
+
+    .section-3 {
+      position: relative;
+      margin-top: -7rem;
+      padding: 20rem 0;
+      background-image: linear-gradient(to right bottom, rgba(255, 0, 0, 0.55), rgba(255, 165, 0, 0.4)), url("https://img.freepik.com/vetores-premium/wallpaper-de-paisagem-em-design-plano_74890-34.jpg");
+      background-size: cover;
+      clip-path: polygon(0 0, 100% 5rem, 100% 100%, 0 100%);
+    }
+
+    .section-2 > * {
+      transform: skewY(2deg);
+    }
+
+    nav-comp {
+      top: 0;
+    }
+
+    grid-comp {
+      top: 8rem;
+    }
+
+    card-comp {
+      top: 0rem;
+    }
+
+  </style>
+  <script type="module" src="/build/gifsearchproject.esm.js"></script>
+  <script nomodule src="/build/gifsearchproject.js"></script>
+</head>
+<body>
+<section class="section-1">
+  <nav-comp></nav-comp>
+  <sr-comp search-symbol="IBM"></sr-comp>
+  </grid-comp>
+</section>
+<section class="section-2">
+  <grid-comp columnType="col-1-of-4">
+    <ft-box
+      title="Title 1"
+      card-color="blue"
+      slot='col-1'>
+      <p slot="p">
+        Paragraph 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      </p>
+    </ft-box>
+    <ft-box title="Title 2"
+            slot='col-2'
+            card-color="orange"
+    >
+
+      <p slot="p">
+        Paragraph 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      </p></ft-box>
+    <ft-box title="Title 3"
+            slot='col-3'
+            card-color="red"
+    >
+      <p slot="p">
+        Paragraph 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      </p>
+    </ft-box>
+    <ft-box title="Title 4"
+            slot='col-4'
+            card-color="orange"
+    >
+      <p slot="p">
+        Paragraph 4: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      </p>
+    </ft-box>
+  </grid-comp>
+</section>
+
+<section class="section-3">
+  <grid-comp columnType="col-1-of-4">
+    <card-comp
+      price="278"
+      url="https://img.anime2you.de/2021/06/jujutsu.jpg"
+      slot='col-1'
+      title="New Card 1"
+      card-front-color="blue"
+      card-back-color="blue"
+      span-color-input="blue"
+      card-back-button-color="blue"
+      card-back-button-color-font="white"
+    >
+      <p slot="p">
+        Paragraph 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magn
+      </p>
+    </card-comp>
+    <card-comp
+      card-front-color="orange"
+      card-back-color="orange"
+      span-color-input="orange"
+      price="279"
+      url="https://i.pinimg.com/736x/6a/6e/d3/6a6ed31725bcbd9df4cb09dadbca44c3.jpg"
+      slot='col-2'
+      title="New Card 2"
+      card-back-button-color="orange"
+      card-back-button-color-font="white"
+    >
+      <p slot="p">
+        Paragraph 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni
+      </p>
+    </card-comp>
+    <card-comp
+      card-front-color="red"
+      card-back-color="red"
+      span-color-input="red"
+      price="229"
+      url="https://www.animenachrichten.de/wp-content/uploads/2022/03/Jujutsu-Kaisen-Newsbild-Maerz-2022.jpg"
+      slot='col-3'
+      title="New Card 3"
+      card-back-button-color="red"
+      card-back-button-color-font="white"
+    >
+      <p slot="p">
+        Paragraph 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni
+      </p>
+    </card-comp>
+    <card-comp
+      card-front-color="blue"
+      card-back-color="blue"
+      span-color-input="blue"
+      price="249"
+      url="https://areajugones.sport.es/wp-content/uploads/2021/11/jujutsu-kaisen-0-promocion.jpg"
+      slot='col-4'
+      title="New Card 4"
+      card-back-button-color="blue"
+      card-back-button-color-font="black"
+    >
+      <p slot="p">
+        Paragraph 4: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni
+      </p>
+    </card-comp>
+  </grid-comp>
+</section>
+
+
+<script>
+
+  let buttonTrending = document.querySelector('nav-comp');
+  let searchComponent = document.querySelector('sr-comp');
+  buttonTrending.addEventListener('navSelected', (event) => {
+    console.log(event);
+    searchComponent.setAttribute("nav-selected", event.detail);
+  });
+</script>
+
+</body>
+</html>

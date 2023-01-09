@@ -1,0 +1,235 @@
+$color-primary: #00e10c;
+$color-primary-light: #024ae5;
+$color-primary-dark: #b810d2;
+$color-secondary-light: #7702e5;
+$color-secondary-dark: #1098d2;
+$color-tertiary-light: #0723d9;
+$color-tertiary-dark: #bb9a18;
+$color-black: #000000;
+$color-white: white;
+$grid-width: 1540px;
+$gutter-vertical: 80px;
+$gutter-horizontal: 60px;
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+:host {
+  position: absolute;
+  font-family: sans-serif;
+  max-width: 100%;
+  font-size: 20px;
+  width: 99%;
+  height: 500px;
+}
+
+
+gif-comp {
+  right: 0cm;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  position: absolute;
+  background-size: cover;
+  background-position: top;
+  left: 35%;
+  top: 10%;
+
+  .text-box {
+    position: absolute;
+    top: 1rem;
+    left: 52%;
+    z-index: 0;
+    box-sizing: border-box;
+
+    .heading-primary-main {
+      text-transform: uppercase;
+      backface-visibility: hidden;
+      margin-bottom: 40px;
+      position: relative;
+      top: 10%;
+      left: 80px;
+      display: block;
+      font-size: 60px;
+      font-weight: 400;
+      animation-name: moveInRight;
+      animation-duration: 1.5s;
+      animation-timing-function: ease-out;
+      letter-spacing: 2px;
+      transition: all 0.3s;
+      color: var(--primary-50);
+      -webkit-background-clip: text;
+
+
+      &:hover {
+        transform: scale(1.05) translateY(-5px);
+      }
+    }
+
+  }
+
+  #sr-form {
+    position: absolute;
+    top: 8rem;
+    left: 50%;
+    width: 600px;
+    z-index: 1;
+    box-sizing: border-box;
+    transition: all 0.4s ease-out;
+
+    #sr-input {
+      text-transform: uppercase;
+      text-decoration: none;
+      position: relative;
+      font-size: inherit;
+      color: var(--mono-30);
+      background: var(--mono-10);
+      border: 0.3rem solid black;
+      left: 1%;
+      width: 30%;
+      top: 1px;
+      height: 3%;
+      padding: 7px 45px;
+      border-radius: 100px;
+      transition: all 0.5s;
+
+      &:disabled {
+        background: rgb(243, 0, 0);
+        border-color: black;
+        cursor: text;
+
+        &:hover {
+          background: rgb(210, 5, 43);
+          box-shadow: 0 5px 10px rgb(210, 5, 43);
+          border-color: black;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+
+    #sr-button {
+      float: bottom;
+      text-transform: uppercase;
+      text-decoration: none;
+      background: var(--primary-50);
+      border: 0.3rem solid #000000;
+      color: #000000;
+      left: 2%;
+      margin: 2rem 2rem;
+      padding: 16px 45px;
+      border-radius: 100px;
+      transition: all 0.5s;
+
+      &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(126, 0, 255, 0.51);
+        cursor: pointer;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgb(33, 201, 33);
+        background: #246e24;
+        color: #130000;
+        cursor: pointer;
+      }
+
+      &:disabled {
+        background: rgb(243, 0, 0);
+        border-color: black;
+        cursor: not-allowed;
+
+        &:hover {
+          background: rgb(210, 5, 43);
+          box-shadow: 0 5px 10px rgb(210, 5, 43);
+          border-color: black;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  &:hover #sr-form:not(:hover) {
+    transform: scale(.99);
+  }
+}
+
+
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+
+  @include clearfix;
+  //start with call use ^sign  , end with col use $sign
+  [class^="col-"] {
+    float: left;
+    border-radius: 100px;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+}
+
+main {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+  margin: 2rem 30px;
+  left: 20px;
+
+}
+
+gif-comp {
+  height: 100px;
+  width: 25%;
+}
+
+.logo {
+  height: 320px;
+  width: 270px;
+  box-shadow: 0 1.5rem 40px rgba($color-black, .35);
+  margin: 0 2px;
+  transition: all .3s ease-out;
+  outline-offset: .5rem;
+  border: 5px solid black;
+
+  &--1:hover {
+    outline: 2px solid $color-primary-light;
+    box-shadow: 0 1.5rem 40px rgba($color-primary-dark, .55);
+    transform: scale(1.1);
+  }
+
+  &--2:hover {
+    outline: 2px solid $color-secondary-light;
+    box-shadow: 0 1.5rem 40px rgba($color-secondary-dark, .55);
+    transform: scale(1.1);
+  }
+
+  &--3:hover {
+    outline: 2px solid $color-tertiary-light;
+    box-shadow: 0 1.5rem 40px rgba($color-tertiary-dark, .55);
+    transform: scale(1.1);
+  }
+
+  &--4:hover {
+    outline: 2px solid $color-tertiary-dark;
+    box-shadow: 0 1.5rem 40px rgba($color-primary-dark, .55);
+    transform: scale(1.1);
+  }
+
+}
+
