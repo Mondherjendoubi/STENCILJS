@@ -1,0 +1,143 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content
+    }; //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content
+    }; //900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content
+    }; //1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content
+    }; //1800
+  }
+}
+
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 3px;
+  padding: 5rem;
+  padding-left: 5rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg);
+  margin-bottom: 10px;
+
+
+  &--red {
+    background-image: linear-gradient(to right, var(--primary-10), var(--primary-30));
+    transition: all 1s;
+
+    &:hover {
+      box-shadow: 0 10px 20px var(--primary-30);
+      cursor: pointer;
+    }
+  }
+
+  &--blue {
+    background-image: linear-gradient(to right, var(--primary-10), var(--primary-70));
+    transition: all 1s;
+    &:hover {
+      box-shadow: 0 10px 20px var(--primary-70);
+      cursor: pointer;
+    }
+  }
+
+  &--orange {
+    background-image: linear-gradient(to right, var(--primary-10), var(--warning-70));
+    transition: all 1s;
+    &:hover {
+      box-shadow: 0 10px 20px var(--warning-70);
+      cursor: pointer;
+    }
+  }
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+
+  &__shape {
+    bottom: 30px;
+    width: 14rem;
+    height: 14rem;
+    float: left;
+    transform: translateX(-3rem) skewX(15deg);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
+    }
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
+  }
+
+  &__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+
+    backface-visibility: hidden;
+    transition: all .5s;
+  }
+
+  &__text {
+    left: 0;
+    color: white;
+    transform: skewX(12deg);
+    @include respond(phone) {
+      transform: skewX(0);
+    }
+
+    ::slotted(p) {
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.78rem;
+    }
+
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%);
+  }
+}

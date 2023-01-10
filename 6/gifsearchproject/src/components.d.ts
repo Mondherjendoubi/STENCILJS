@@ -38,6 +38,12 @@ export namespace Components {
         "navSelected": string;
         "searchSymbol": string;
     }
+    interface StoryComp {
+        "captionStory": string;
+        "colorStory": string;
+        "fontColor": string;
+        "titleStory": string;
+    }
 }
 export interface NavCompCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -86,6 +92,12 @@ declare global {
         prototype: HTMLSrCompElement;
         new (): HTMLSrCompElement;
     };
+    interface HTMLStoryCompElement extends Components.StoryComp, HTMLStencilElement {
+    }
+    var HTMLStoryCompElement: {
+        prototype: HTMLStoryCompElement;
+        new (): HTMLStoryCompElement;
+    };
     interface HTMLElementTagNameMap {
         "btn-exp": HTMLBtnExpElement;
         "card-comp": HTMLCardCompElement;
@@ -94,6 +106,7 @@ declare global {
         "grid-comp": HTMLGridCompElement;
         "nav-comp": HTMLNavCompElement;
         "sr-comp": HTMLSrCompElement;
+        "story-comp": HTMLStoryCompElement;
     }
 }
 declare namespace LocalJSX {
@@ -130,6 +143,12 @@ declare namespace LocalJSX {
         "navSelected"?: string;
         "searchSymbol"?: string;
     }
+    interface StoryComp {
+        "captionStory"?: string;
+        "colorStory"?: string;
+        "fontColor"?: string;
+        "titleStory"?: string;
+    }
     interface IntrinsicElements {
         "btn-exp": BtnExp;
         "card-comp": CardComp;
@@ -138,6 +157,7 @@ declare namespace LocalJSX {
         "grid-comp": GridComp;
         "nav-comp": NavComp;
         "sr-comp": SrComp;
+        "story-comp": StoryComp;
     }
 }
 export { LocalJSX as JSX };
@@ -151,6 +171,7 @@ declare module "@stencil/core" {
             "grid-comp": LocalJSX.GridComp & JSXBase.HTMLAttributes<HTMLGridCompElement>;
             "nav-comp": LocalJSX.NavComp & JSXBase.HTMLAttributes<HTMLNavCompElement>;
             "sr-comp": LocalJSX.SrComp & JSXBase.HTMLAttributes<HTMLSrCompElement>;
+            "story-comp": LocalJSX.StoryComp & JSXBase.HTMLAttributes<HTMLStoryCompElement>;
         }
     }
 }

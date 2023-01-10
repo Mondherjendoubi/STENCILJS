@@ -19,7 +19,7 @@
   /* Danger */
   --danger-70: #bd2c2c;
   --danger-50: #dd3434;
-  --danger-05: #feeaea;
+  --danger-05: rgba(254, 234, 234, 0.42);
 }
 
 body {

@@ -38,10 +38,19 @@
     .section-3 {
       position: relative;
       margin-top: -7rem;
+      height: 20rem;
       padding: 20rem 0;
-      background-image: linear-gradient(to right bottom, rgba(255, 0, 0, 0.55), rgba(255, 165, 0, 0.4)), url("https://img.freepik.com/vetores-premium/wallpaper-de-paisagem-em-design-plano_74890-34.jpg");
+      background-image: linear-gradient(to right bottom, rgba(255, 0, 0, 0.55), rgba(255, 165, 0, 0.4)), url("https://marmotamaps.com/de/fx/wallpaper/download/faszinationen/Marmotamaps_Wallpaper_Berchtesgaden_Desktop_1920x1080.jpg");
       background-size: cover;
       clip-path: polygon(0 0, 100% 5rem, 100% 100%, 0 100%);
+    }
+
+    .section-4 {
+      position: relative;
+      margin-top: -15rem;
+      padding: 4rem 8rem;
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 255, 0.63), rgba(0, 128, 0, 0.34)), url("https://marmotamaps.com/de/fx/wallpaper/download/faszinationen/Marmotamaps_Wallpaper_Berchtesgaden_Desktop_1920x1080.jpg");
+      background-size: cover;
     }
 
     .section-2 > * {
@@ -59,6 +68,7 @@
     card-comp {
       top: 0rem;
     }
+
 
   </style>
   <script type="module" src="/build/gifsearchproject.esm.js"></script>
@@ -171,10 +181,34 @@
     </card-comp>
   </grid-comp>
 </section>
+<section class="section-4">
+  <story-comp color-story="red"
+              title-story="Title 1: I had the best week ever with my family"
+              caption-story="Caption 1"
+  >
+    <p slot="p">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat
+      quis consequatur
+      ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
+      repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
+    </p>
+  </story-comp>
+  <story-comp color-story="blue"
+             title-story="Title 2:I had the best week ever with my family"
+              caption-story="Caption 2"
+  >
+    <p slot="p">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat
+      quis consequatur
+      ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
+      repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
+    </p>
+  </story-comp>
+
+</section>
 
 
 <script>
-
   let buttonTrending = document.querySelector('nav-comp');
   let searchComponent = document.querySelector('sr-comp');
   buttonTrending.addEventListener('navSelected', (event) => {
