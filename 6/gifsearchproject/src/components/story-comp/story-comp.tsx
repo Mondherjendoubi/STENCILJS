@@ -14,6 +14,7 @@ export class StoryComp {
   @Prop({mutable: true, reflect: true}) colorStory: string;
   @Prop({mutable: true, reflect: true}) fontColor: string;
   @Prop({mutable: true, reflect: true}) captionStory: string;
+  @Prop({mutable: true, reflect: true}) url: string;
   @State() colorStoryInput: string;
   @State() fontColorInput: string;
   @State() titleInput: string;
@@ -67,7 +68,7 @@ export class StoryComp {
     return [
       <div class={`story story--${this.colorStoryInput}`}>
         <figure class="story__shape">
-          <img src="https://areajugones.sport.es/wp-content/uploads/2021/11/jujutsu-kaisen-0-promocion.jpg"
+          <img src={this.url}
                alt="Person on a tour" class="story__img"/>
           <figcaption class="story__caption">{this.captionInput}</figcaption>
         </figure>

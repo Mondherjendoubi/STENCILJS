@@ -27,7 +27,7 @@
   margin: 0 auto;
   border-radius: 3px;
   padding: 5rem;
-  padding-left: 5rem;
+  padding-left: 1rem;
   font-size: 1.6rem;
   transform: skewX(-12deg);
   margin-bottom: 10px;
@@ -72,7 +72,8 @@
   }
 
   &__shape {
-    bottom: 30px;
+    left: 70px;
+    bottom: 25px;
     width: 14rem;
     height: 14rem;
     float: left;
@@ -95,9 +96,9 @@
   }
 
   &__img {
+    background-size: cover;
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
-
     backface-visibility: hidden;
     transition: all .5s;
   }

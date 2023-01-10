@@ -43,6 +43,7 @@ export namespace Components {
         "colorStory": string;
         "fontColor": string;
         "titleStory": string;
+        "url": string;
     }
 }
 export interface NavCompCustomEvent<T> extends CustomEvent<T> {
@@ -148,6 +149,7 @@ declare namespace LocalJSX {
         "colorStory"?: string;
         "fontColor"?: string;
         "titleStory"?: string;
+        "url"?: string;
     }
     interface IntrinsicElements {
         "btn-exp": BtnExp;
