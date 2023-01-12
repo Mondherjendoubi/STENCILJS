@@ -6,6 +6,19 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface AccordionComponent {
+        "backgroundColor": string;
+        "hoverBackgroundColor": string;
+        "itemHead": string;
+    }
+    interface BackgroundVideo {
+        "image": string;
+    }
+    interface BodyItem {
+    }
+    interface BodyTable {
+        "numberColumn": number;
+    }
     interface BtnExp {
         "colorButton": string;
         "content": string;
@@ -31,6 +44,11 @@ export namespace Components {
     interface GridComp {
         "columnType": string;
     }
+    interface HeadItem {
+    }
+    interface HeadTable {
+        "numberColumn": number;
+    }
     interface NavComp {
         "url": string;
     }
@@ -45,12 +63,38 @@ export namespace Components {
         "titleStory": string;
         "url": string;
     }
+    interface TableComp {
+    }
 }
 export interface NavCompCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLNavCompElement;
 }
 declare global {
+    interface HTMLAccordionComponentElement extends Components.AccordionComponent, HTMLStencilElement {
+    }
+    var HTMLAccordionComponentElement: {
+        prototype: HTMLAccordionComponentElement;
+        new (): HTMLAccordionComponentElement;
+    };
+    interface HTMLBackgroundVideoElement extends Components.BackgroundVideo, HTMLStencilElement {
+    }
+    var HTMLBackgroundVideoElement: {
+        prototype: HTMLBackgroundVideoElement;
+        new (): HTMLBackgroundVideoElement;
+    };
+    interface HTMLBodyItemElement extends Components.BodyItem, HTMLStencilElement {
+    }
+    var HTMLBodyItemElement: {
+        prototype: HTMLBodyItemElement;
+        new (): HTMLBodyItemElement;
+    };
+    interface HTMLBodyTableElement extends Components.BodyTable, HTMLStencilElement {
+    }
+    var HTMLBodyTableElement: {
+        prototype: HTMLBodyTableElement;
+        new (): HTMLBodyTableElement;
+    };
     interface HTMLBtnExpElement extends Components.BtnExp, HTMLStencilElement {
     }
     var HTMLBtnExpElement: {
@@ -81,6 +125,18 @@ declare global {
         prototype: HTMLGridCompElement;
         new (): HTMLGridCompElement;
     };
+    interface HTMLHeadItemElement extends Components.HeadItem, HTMLStencilElement {
+    }
+    var HTMLHeadItemElement: {
+        prototype: HTMLHeadItemElement;
+        new (): HTMLHeadItemElement;
+    };
+    interface HTMLHeadTableElement extends Components.HeadTable, HTMLStencilElement {
+    }
+    var HTMLHeadTableElement: {
+        prototype: HTMLHeadTableElement;
+        new (): HTMLHeadTableElement;
+    };
     interface HTMLNavCompElement extends Components.NavComp, HTMLStencilElement {
     }
     var HTMLNavCompElement: {
@@ -99,18 +155,44 @@ declare global {
         prototype: HTMLStoryCompElement;
         new (): HTMLStoryCompElement;
     };
+    interface HTMLTableCompElement extends Components.TableComp, HTMLStencilElement {
+    }
+    var HTMLTableCompElement: {
+        prototype: HTMLTableCompElement;
+        new (): HTMLTableCompElement;
+    };
     interface HTMLElementTagNameMap {
+        "accordion-component": HTMLAccordionComponentElement;
+        "background-video": HTMLBackgroundVideoElement;
+        "body-item": HTMLBodyItemElement;
+        "body-table": HTMLBodyTableElement;
         "btn-exp": HTMLBtnExpElement;
         "card-comp": HTMLCardCompElement;
         "ft-box": HTMLFtBoxElement;
         "gif-comp": HTMLGifCompElement;
         "grid-comp": HTMLGridCompElement;
+        "head-item": HTMLHeadItemElement;
+        "head-table": HTMLHeadTableElement;
         "nav-comp": HTMLNavCompElement;
         "sr-comp": HTMLSrCompElement;
         "story-comp": HTMLStoryCompElement;
+        "table-comp": HTMLTableCompElement;
     }
 }
 declare namespace LocalJSX {
+    interface AccordionComponent {
+        "backgroundColor"?: string;
+        "hoverBackgroundColor"?: string;
+        "itemHead"?: string;
+    }
+    interface BackgroundVideo {
+        "image"?: string;
+    }
+    interface BodyItem {
+    }
+    interface BodyTable {
+        "numberColumn"?: number;
+    }
     interface BtnExp {
         "colorButton"?: string;
         "content"?: string;
@@ -136,6 +218,11 @@ declare namespace LocalJSX {
     interface GridComp {
         "columnType"?: string;
     }
+    interface HeadItem {
+    }
+    interface HeadTable {
+        "numberColumn"?: number;
+    }
     interface NavComp {
         "onNavSelected"?: (event: NavCompCustomEvent<string>) => void;
         "url"?: string;
@@ -151,29 +238,45 @@ declare namespace LocalJSX {
         "titleStory"?: string;
         "url"?: string;
     }
+    interface TableComp {
+    }
     interface IntrinsicElements {
+        "accordion-component": AccordionComponent;
+        "background-video": BackgroundVideo;
+        "body-item": BodyItem;
+        "body-table": BodyTable;
         "btn-exp": BtnExp;
         "card-comp": CardComp;
         "ft-box": FtBox;
         "gif-comp": GifComp;
         "grid-comp": GridComp;
+        "head-item": HeadItem;
+        "head-table": HeadTable;
         "nav-comp": NavComp;
         "sr-comp": SrComp;
         "story-comp": StoryComp;
+        "table-comp": TableComp;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "accordion-component": LocalJSX.AccordionComponent & JSXBase.HTMLAttributes<HTMLAccordionComponentElement>;
+            "background-video": LocalJSX.BackgroundVideo & JSXBase.HTMLAttributes<HTMLBackgroundVideoElement>;
+            "body-item": LocalJSX.BodyItem & JSXBase.HTMLAttributes<HTMLBodyItemElement>;
+            "body-table": LocalJSX.BodyTable & JSXBase.HTMLAttributes<HTMLBodyTableElement>;
             "btn-exp": LocalJSX.BtnExp & JSXBase.HTMLAttributes<HTMLBtnExpElement>;
             "card-comp": LocalJSX.CardComp & JSXBase.HTMLAttributes<HTMLCardCompElement>;
             "ft-box": LocalJSX.FtBox & JSXBase.HTMLAttributes<HTMLFtBoxElement>;
             "gif-comp": LocalJSX.GifComp & JSXBase.HTMLAttributes<HTMLGifCompElement>;
             "grid-comp": LocalJSX.GridComp & JSXBase.HTMLAttributes<HTMLGridCompElement>;
+            "head-item": LocalJSX.HeadItem & JSXBase.HTMLAttributes<HTMLHeadItemElement>;
+            "head-table": LocalJSX.HeadTable & JSXBase.HTMLAttributes<HTMLHeadTableElement>;
             "nav-comp": LocalJSX.NavComp & JSXBase.HTMLAttributes<HTMLNavCompElement>;
             "sr-comp": LocalJSX.SrComp & JSXBase.HTMLAttributes<HTMLSrCompElement>;
             "story-comp": LocalJSX.StoryComp & JSXBase.HTMLAttributes<HTMLStoryCompElement>;
+            "table-comp": LocalJSX.TableComp & JSXBase.HTMLAttributes<HTMLTableCompElement>;
         }
     }
 }

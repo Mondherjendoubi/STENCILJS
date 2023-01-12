@@ -94,7 +94,6 @@ export class searchGif {
       dataContent = this.gifArray.map((result) => (
         <img slot={`col-${++index}`} src={result['url']} alt="logo" class={`logo logo--${index}`}/>
       ));
-
     }
     return [
       <header class="header">

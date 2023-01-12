@@ -32,7 +32,6 @@
       padding: 20rem 0;
       background-image: linear-gradient(to right bottom, rgba(0, 0, 255, 0.63), rgba(0, 128, 0, 0.34)), url("https://marmotamaps.com/de/fx/wallpaper/download/faszinationen/Marmotamaps_Wallpaper_Berchtesgaden_Desktop_1920x1080.jpg");
       background-size: cover;
-      transform: skewY(-2deg);
     }
 
     .section-3 {
@@ -53,6 +52,27 @@
       background-size: cover;
     }
 
+
+    .section-5 {
+      position: relative;
+      margin-top: -2rem;
+      padding: 20rem 0;
+      background-color: rgba(128, 128, 128, 0.2);;
+      background-size: cover;
+      transform: skewY(-2deg);
+    }
+
+    .section-6 {
+      position: relative;
+      margin-top: -7rem;
+      height: 20rem;
+      padding: 20rem 0;
+      background-image: linear-gradient(to right bottom, rgb(0, 0, 0), rgba(221, 255, 0, 0.4)), url("https://wallpaperaccess.com/full/31189.jpg");
+      background-size: cover;
+      clip-path: polygon(0 0, 100% 5rem, 100% 100%, 0 100%);
+    }
+
+    .marin-
     .section-2 > * {
       transform: skewY(2deg);
     }
@@ -77,7 +97,7 @@
 <body>
 <section class="section-1">
   <nav-comp></nav-comp>
-  <sr-comp search-symbol="IBM"></sr-comp>
+  <sr-comp search-symbol="Apple"></sr-comp>
   </grid-comp>
 </section>
 <section class="section-2">
@@ -85,7 +105,9 @@
     <ft-box
       title="Title 1"
       card-color="blue"
-      slot='col-1'>
+      slot='col-1'
+      c="green"
+    >
       <p slot="p">
         Paragraph 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
       </p>
@@ -195,7 +217,7 @@
     </p>
   </story-comp>
   <story-comp color-story="blue"
-             title-story="Title 2: I had the best week ever with my family"
+              title-story="Title 2: I had the best week ever with my family"
               caption-story="Caption 2"
               url="https://areajugones.sport.es/wp-content/uploads/2021/11/jujutsu-kaisen-0-promocion.jpg"
   >
@@ -207,7 +229,93 @@
 
     </p>
   </story-comp>
-
+</section>
+<section class="section-5">
+  <accordion-component
+    background-color="blue"
+    item-head="Item 1"
+  >
+    <p slot="p">
+      Paragraph 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,Lorem ipsum dolor
+      sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+    </p>
+  </accordion-component>
+  <accordion-component
+    background-color="red"
+    item-head="Item 2"
+  >
+    <p slot="p">
+      Paragraph 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,Lorem ipsum dolor
+      sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+    </p>
+  </accordion-component>
+  <accordion-component
+    background-color="orange"
+    item-head="Item 3"
+  >
+    <p slot="p">
+      Paragraph 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,Lorem ipsum dolor
+      sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni,
+    </p>
+  </accordion-component>
+</section>
+<section class="section-6">
+  <table-comp>
+    <head-table number-column="4">
+      <head-item slot="col-1">Name</head-item>
+      <head-item slot="col-2">Lastname</head-item>
+      <head-item slot="col-3">Age</head-item>
+      <head-item slot="col-4">Phone Number</head-item>
+    </head-table>
+    <body-table number-column="4">
+      <body-item slot="col-1">Lebron</body-item>
+      <body-item slot="col-2">James</body-item>
+      <body-item slot="col-3">38</body-item>
+      <body-item slot="col-4">+4921145257</body-item>
+    </body-table>
+    <body-table number-column="4">
+      <body-item slot="col-1">Russel</body-item>
+      <body-item slot="col-2">Westbrook</body-item>
+      <body-item slot="col-3">33</body-item>
+      <body-item slot="col-4">+4921225257</body-item>
+    </body-table>
+    <body-table number-column="4">
+      <body-item slot="col-1">James</body-item>
+      <body-item slot="col-2">harden</body-item>
+      <body-item slot="col-3">22</body-item>
+      <body-item slot="col-4">+4921225257</body-item>
+    </body-table>
+    <body-table number-column="4">
+      <body-item slot="col-1">Kendrick</body-item>
+      <body-item slot="col-2">Lamar</body-item>
+      <body-item slot="col-3">22</body-item>
+      <body-item slot="col-4">+4921225257</body-item>
+    </body-table>
+    <body-table number-column="4">
+      <body-item slot="col-1">John</body-item>
+      <body-item slot="col-2">Wahl</body-item>
+      <body-item slot="col-3">22</body-item>
+      <body-item slot="col-4">+4921225257</body-item>
+    </body-table>
+  </table-comp>
 </section>
 
 
