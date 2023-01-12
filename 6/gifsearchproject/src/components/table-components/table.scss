@@ -1,10 +1,10 @@
 .table {
-  background-color: rgba(14, 7, 7, 0.5);
+  background-color: rgb(246, 242, 242);
   margin: auto 6rem;
   padding: 20px 1px;
   border: 2px solid #180202;
   transition: all 0.4s;
   &:hover{
-    box-shadow: 0 2px 20px 2px rgba(0, 255, 42, 0.24);
+    box-shadow: 0 2px 20px 2px rgb(3, 48, 231);
   }
 }
