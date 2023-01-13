@@ -72,6 +72,15 @@
       clip-path: polygon(0 0, 100% 5rem, 100% 100%, 0 100%);
     }
 
+    .section-7 {
+      position: relative;
+      margin-top: -2rem;
+      padding: 20rem 0;
+      background-color: rgba(128, 128, 128, 0.2);;
+      background-size: cover;
+    }
+
+
     .marin-
     .section-2 > * {
       transform: skewY(2deg);
@@ -89,6 +98,10 @@
       top: 0rem;
     }
 
+
+    h4{
+      color: white;
+    }
 
   </style>
   <script type="module" src="/build/gifsearchproject.esm.js"></script>
@@ -317,7 +330,35 @@
     </body-table>
   </table-comp>
 </section>
+<section class="section-7">
+  <grid-comp>
+    <drop-down background-color="red" slot='col-1'>
+      <h4 slot="Title">Title 1</h4>
+      <drop-link>Link 1</drop-link>
+      <drop-link>Link 2</drop-link>
+      <drop-link>Link 3</drop-link>
+      <drop-link>Link 4</drop-link>
+      <drop-link>Link 5</drop-link>
+      <drop-link>Link 6</drop-link>
+    </drop-down>
+    <drop-down background-color="blue" slot="col-2">
+      <h4 slot="Title">Title 2</h4>
+      <drop-link>Link 1</drop-link>
+      <drop-link>Link 2</drop-link>
+    </drop-down>
+    <drop-down background-color="orange" slot="col-3">
+      <h4 slot="Title">Title 3</h4>
+      <drop-link>Link 1</drop-link>
+      <drop-link>Link 2</drop-link>
+      <drop-link>Link 3</drop-link>
+    </drop-down>
+    <drop-down background-color="blue" slot="col-4">
+      <h4 slot="Title">Title 4</h4>
+      <drop-link>Link 1</drop-link>
+    </drop-down>
+  </grid-comp>
 
+</section>
 
 <script>
   let buttonTrending = document.querySelector('nav-comp');

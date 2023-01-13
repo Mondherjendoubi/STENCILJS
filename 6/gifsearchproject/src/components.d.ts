@@ -34,6 +34,12 @@ export namespace Components {
         "title": string;
         "url": string;
     }
+    interface DropDown {
+        "backgroundColor": string;
+    }
+    interface DropLink {
+        "backgroundColor": string;
+    }
     interface FtBox {
         "cardColor": string;
         "title": string;
@@ -107,6 +113,18 @@ declare global {
         prototype: HTMLCardCompElement;
         new (): HTMLCardCompElement;
     };
+    interface HTMLDropDownElement extends Components.DropDown, HTMLStencilElement {
+    }
+    var HTMLDropDownElement: {
+        prototype: HTMLDropDownElement;
+        new (): HTMLDropDownElement;
+    };
+    interface HTMLDropLinkElement extends Components.DropLink, HTMLStencilElement {
+    }
+    var HTMLDropLinkElement: {
+        prototype: HTMLDropLinkElement;
+        new (): HTMLDropLinkElement;
+    };
     interface HTMLFtBoxElement extends Components.FtBox, HTMLStencilElement {
     }
     var HTMLFtBoxElement: {
@@ -168,6 +186,8 @@ declare global {
         "body-table": HTMLBodyTableElement;
         "btn-exp": HTMLBtnExpElement;
         "card-comp": HTMLCardCompElement;
+        "drop-down": HTMLDropDownElement;
+        "drop-link": HTMLDropLinkElement;
         "ft-box": HTMLFtBoxElement;
         "gif-comp": HTMLGifCompElement;
         "grid-comp": HTMLGridCompElement;
@@ -208,6 +228,12 @@ declare namespace LocalJSX {
         "title"?: string;
         "url"?: string;
     }
+    interface DropDown {
+        "backgroundColor"?: string;
+    }
+    interface DropLink {
+        "backgroundColor"?: string;
+    }
     interface FtBox {
         "cardColor"?: string;
         "title"?: string;
@@ -247,6 +273,8 @@ declare namespace LocalJSX {
         "body-table": BodyTable;
         "btn-exp": BtnExp;
         "card-comp": CardComp;
+        "drop-down": DropDown;
+        "drop-link": DropLink;
         "ft-box": FtBox;
         "gif-comp": GifComp;
         "grid-comp": GridComp;
@@ -268,6 +296,8 @@ declare module "@stencil/core" {
             "body-table": LocalJSX.BodyTable & JSXBase.HTMLAttributes<HTMLBodyTableElement>;
             "btn-exp": LocalJSX.BtnExp & JSXBase.HTMLAttributes<HTMLBtnExpElement>;
             "card-comp": LocalJSX.CardComp & JSXBase.HTMLAttributes<HTMLCardCompElement>;
+            "drop-down": LocalJSX.DropDown & JSXBase.HTMLAttributes<HTMLDropDownElement>;
+            "drop-link": LocalJSX.DropLink & JSXBase.HTMLAttributes<HTMLDropLinkElement>;
             "ft-box": LocalJSX.FtBox & JSXBase.HTMLAttributes<HTMLFtBoxElement>;
             "gif-comp": LocalJSX.GifComp & JSXBase.HTMLAttributes<HTMLGifCompElement>;
             "grid-comp": LocalJSX.GridComp & JSXBase.HTMLAttributes<HTMLGridCompElement>;
